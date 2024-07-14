@@ -1,7 +1,7 @@
 # CSE-151A-Group-Project: Parkinson's Telemonitoring Data Preprocessing
 
 This README file provides an overview of the preprocessing steps applied to the Parkinson's Telemonitoring dataset, which is available [here](https://archive.ics.uci.edu/dataset/189/parkinsons+telemonitoring).
-Here is a link to our [Jupyter notebook](https://colab.research.google.com/drive/1xcPzwsV2chVULtxJ78fbrL-X01Hw_6-6?usp=sharing)
+Here is a link to our [Jupyter notebook](https://colab.research.google.com/drive/1xcPzwsV2chVULtxJ78fbrL-X01Hw_6-6?usp=sharing).
 
 ## Dataset Description
 
