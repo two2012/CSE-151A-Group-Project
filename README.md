@@ -147,21 +147,21 @@ The forth training model uses polynomial regression with different degrees to pr
 
 ### 2. Evaluate the Model  
 
-Degree: 2
-Training MSE: 91.30149523550578
-Testing MSE: 92.59453846147005
+Degree: 2  
+Training MSE: 91.30149523550578  
+Testing MSE: 92.59453846147005  
 
-Degree: 3
-Training MSE: 75.5321706975659
-Testing MSE: 78.78651480142535
+Degree: 3  
+Training MSE: 75.5321706975659  
+Testing MSE: 78.78651480142535  
 
-Degree: 4
-Training MSE: 63.6578849887747
-Testing MSE: 85.76560525648883
+Degree: 4  
+Training MSE: 63.6578849887747  
+Testing MSE: 85.76560525648883  
 
-Degree: 5
-Training MSE: 58.66115873795397
-Testing MSE: 65.00506155472495
+Degree: 5  
+Training MSE: 58.66115873795397  
+Testing MSE: 65.00506155472495  
 
 ### 3. Conclusion
 
