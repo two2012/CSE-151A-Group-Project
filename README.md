@@ -101,3 +101,40 @@ Despite incorporating more features, the MSE values for both the training and te
 
 We will improve the model by using polynomial regression, which might better capture the relationship between the predictors and Total UPDRS.  
 
+## Third Model : Polynomial Regression with multiple features
+
+We selected the features age', 'test_time','HNR', 'RPDE', 'DFA', 'PPE' to predict UPDRS with linear regression since based on previous pairplot, these five features has the highest correlation with UPDRS.
+
+### 1. Training the Model  
+
+The third training model uses polynomial regression with different degrees to predict the Total UPDRS based on the age of the patients. The performance of this model for polynomial degrees 2, 3, 4, 5, and 6 is depicted in the graphs where the blue points represent the actual test data, and the red line represents the polynomial fit.  
+
+### 2. Evaluate the Model  
+
+Degree: 2  
+Training MSE: 103.22558961899044  
+Testing MSE: 104.28521627744276  
+
+Degree: 3  
+Training MSE: 102.519105410386  
+Testing MSE: 104.14708158965924  
+
+Degree: 4  
+Training MSE: 91.77259183842843  
+Testing MSE: 93.45164352727815  
+
+Degree: 5  
+Training MSE: 90.39710993279027  
+Testing MSE: 92.25493432875028  
+
+Degree: 6  
+Training MSE: 90.39699985590552  
+Testing MSE: 92.25884504149018  
+
+
+### 3. Conclusion
+
+The polynomial regression models show improved performance compared to the initial linear regression models, with lower MSE values. The MSE values of testing and training are close, indicating that the model is **not overfitting or underfiting** at degree of 5 and 6. However, the MSE stop decreasing at degree 5 and 6. The polynomial fits capture more complexity in the relationship between age and Total UPDRS, as shown by the red curves, but the MSE values are still relatively high, indicating that polynomial regression is still not able to capture the trend of UPDRS.  
+
+We may improve our model by utilizing **neural network**.
+
