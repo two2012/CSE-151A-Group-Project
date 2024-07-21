@@ -71,9 +71,9 @@ The first training model uses linear regression to predict the Total UPDRS based
 
 ### 2. Evaluate the Model  
 
-Training MSE: 97.96295980665154  
+Mean Squared Error for training : 103.303671
 
-Testing MSE: 98.0749777435734  
+Mean Squared Error for test: 104.069142
 
 ### 3. Conclusion
 
@@ -83,7 +83,7 @@ In order to improve our model, we will incorporate more features. Adding more re
 
 ## Second Model : Linear Regression with multiple features
 
-We selected the features age', 'test_time','HNR', 'RPDE', 'DFA', 'PPE' to predict UPDRS with linear regression since based on previous pairplot, these five features has the highest correlation with UPDRS.
+We selected the features 'age', 'HNR', 'RPDE', 'DFA', 'PPE' to predict UPDRS with linear regression since based on previous pairplot, these five features has the highest correlation with UPDRS.
 
 ### 1. Training the Model  
 
@@ -91,9 +91,9 @@ The second training model uses linear regression with multiple features to predi
 
 ### 2. Evaluate the Model  
 
-Training MSE: 97.96295980665154  
+Training MSE: 98.72263258065661
 
-Testing MSE: 98.0749777435734  
+Testing MSE: 98.48770950441289
 
 ### 3. Conclusion
 
@@ -101,9 +101,9 @@ Despite incorporating more features, the MSE values for both the training and te
 
 We will improve the model by using polynomial regression, which might better capture the relationship between the predictors and Total UPDRS.  
 
-## Third Model : Polynomial Regression with multiple features
+## Third Model : Polynomial Regression with single feature
 
-We selected the features age', 'test_time','HNR', 'RPDE', 'DFA', 'PPE' to predict UPDRS with linear regression since based on previous pairplot, these five features has the highest correlation with UPDRS.
+We selected the features 'age' to predict UPDRS with polynomial regression since based on previous pairplot, this feature has the highest correlation with UPDRS.
 
 ### 1. Training the Model  
 
@@ -136,5 +136,41 @@ Testing MSE: 92.25884504149018
 
 The polynomial regression models show improved performance compared to the initial linear regression models, with lower MSE values. The MSE values of testing and training are close, indicating that the model is **not overfitting or underfiting** at degree of 5 and 6. However, the MSE stop decreasing at degree 5 and 6. The polynomial fits capture more complexity in the relationship between age and Total UPDRS, as shown by the red curves, but the MSE values are still relatively high, indicating that polynomial regression is still not able to capture the trend of UPDRS.  
 
+
+## Forth Model : Polynomial Regression with multiple features
+
+We selected the features 'age', 'HNR', 'RPDE', 'DFA', 'PPE' to predict UPDRS with polynomial regression since based on previous pairplot, these five features has the highest correlation with UPDRS.
+
+### 1. Training the Model  
+
+The forth training model uses polynomial regression with different degrees to predict the Total UPDRS based on the multple features of the patients. The performance of this model on degree 2, 3, 4, and 5 is depicted in the graph where blue points represent training data, red points represent test data, and the black dashed line represents the linear fit. 
+
+### 2. Evaluate the Model  
+
+Degree: 2
+
+Training MSE: 91.30149523550578
+Testing MSE: 92.59453846147005
+
+Degree: 3
+
+Training MSE: 75.5321706975659
+Testing MSE: 78.78651480142535
+
+Degree: 4
+
+Training MSE: 63.6578849887747
+Testing MSE: 85.76560525648883
+
+Degree: 5
+
+Training MSE: 58.66115873795397
+Testing MSE: 65.00506155472495
+
+### 3. Conclusion
+
+The polynomial regression models show improved performance compared to the previous polynomial regression model and the linear regression models, with lower MSE values. The MSE values of testing and training are close, indicating that the model is **not overfitting or underfiting** at degree of 5. However, the MSE increased suddenly at degree 6. The overall stabilization of MSE at higher degrees indicates diminishing returns from increasing complexity, indicating that polynomial regression is still not able to capture the trend of UPDRS.
+
 We may improve our model by utilizing **neural network**.
+
 
