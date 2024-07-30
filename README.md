@@ -1,3 +1,7 @@
+# Introduction
+
+This project focuses on preprocessing and predictive modeling of the Parkinson's Telemonitoring dataset, which contains biomedical voice measurements from individuals with early-stage Parkinson's disease. We chose this dataset to explore how voice data can be used to predict Unified Parkinson's Disease Rating Scale (UPDRS) scores, crucial for tracking disease progression. This approach is compelling as it leverages non-invasive data collection for remote monitoring, potentially transforming patient care. Developing an accurate predictive model can significantly impact the early detection and management of Parkinson's disease, improving patient outcomes and enabling more efficient healthcare delivery.
+
 # CSE-151A-Group-Project: Parkinson's Telemonitoring Data Preprocessing
 
 This README file provides an overview of the preprocessing steps applied to the Parkinson's Telemonitoring dataset, which is available [here](https://archive.ics.uci.edu/dataset/189/parkinsons+telemonitoring).
@@ -136,7 +140,6 @@ Testing MSE: 92.25884504149018
 
 The polynomial regression models show improved performance compared to the initial linear regression models, with lower MSE values. The MSE values of testing and training are close, indicating that the model is **not overfitting or underfiting** at degree of 5 and 6. However, the MSE stop decreasing at degree 5 and 6. The polynomial fits capture more complexity in the relationship between age and Total UPDRS, as shown by the red curves, but the MSE values are still relatively high, indicating that polynomial regression is still not able to capture the trend of UPDRS.  
 
-
 ## Forth Model : Polynomial Regression with multiple features
 
 We selected the features 'age', 'HNR', 'RPDE', 'DFA', 'PPE' to predict UPDRS with polynomial regression since based on previous pairplot, these five features has the highest correlation with UPDRS.
@@ -168,5 +171,51 @@ Testing MSE: 65.00506155472495
 The polynomial regression models show improved performance compared to the previous polynomial regression model and the linear regression models, with lower MSE values. The MSE values of testing and training are close, indicating that the model is **not overfitting or underfiting** at degree of 5. However, the MSE increased suddenly at degree 6. The overall stabilization of MSE at higher degrees indicates diminishing returns from increasing complexity, indicating that polynomial regression is still not able to capture the trend of UPDRS.
 
 We may improve our model by utilizing **neural network**.
+
+## Fifth Model : Neuron Network with single features
+
+We selected the features 'age' to predict UPDRS with a neural network. The neural network is trained with the scaled versions of the feature to ensure better performance and convergence.
+
+### 1. Training the Model  
+
+The fifth model utilizes a neural network with multiple layers and ReLU activation functions to predict the Total UPDRS. The architecture of the neural network consists of:
+Input layer with 64 neurons  
+Hidden layers with 32 and 16 neurons, respectively  
+Output layer with a single neuron to predict the UPDRS value  
+The model is trained for 100 epochs with a batch size of 32, using the Adam optimizer and mean squared error as the loss function. The training process includes validation with a 20% validation split.
+
+### 2. Evaluate the Model  
+
+After training, the model is evaluated on the test data to determine its performance. The Mean Squared Error (MSE) values for the training and testing datasets are:
+
+Training MSE: 64.45315195120001  
+Testing MSE: 64.2839383791606
+
+### 3. Conclusion
+
+The neural network model shows an improved performance compared to the previous polynomial regression models. The MSE values for both the training and testing datasets are closer, indicating that the model is **not overfitting or underfitting.** The neural network is able to capture more complex relationships between the features and the Total UPDRS, leading to better predictions. However, the MSE values are still relatively high, suggesting that further tuning of the model or the inclusion of additional features might be necessary to capture the trend of UPDRS more accurately.
+
+## Sixth Model : Neuron Network with multiple features
+
+We selected the features 'age', 'HNR', 'RPDE', 'DFA', 'PPE' to predict UPDRS using a neural network. The neural network is trained with the scaled versions of these features to ensure better performance and convergence.
+
+### 1. Training the Model  
+
+The sixth model utilizes a neural network with multiple layers and ReLU activation functions to predict the Total UPDRS. The architecture of the neural network consists of:  
+Input layer with 64 neurons  
+Hidden layers with 32 and 16 neurons, respectively  
+Output layer with a single neuron to predict the UPDRS value  
+The model is trained for 100 epochs with a batch size of 32, using the Adam optimizer and mean squared error as the loss function. The training process includes validation with a 20% validation split.
+
+### 2. Evaluate the Model  
+
+After training, the model is evaluated on the test data to determine its performance. The Mean Squared Error (MSE) values for the training and testing datasets are:  
+
+Training MSE: 42.42932937216077  
+Testing MSE: 48.43486740770869
+
+### 3. Conclusion
+
+The neural network model shows an improved performance compared to the previous polynomial regression models. The MSE values for both the training and testing datasets are lower, indicating that the model has learned the underlying patterns in the data effectively **without overfitting or underfitting.** The neural network captures more complex relationships between the features and the Total UPDRS, resulting in better predictions.
 
 
