@@ -1,8 +1,8 @@
+# CSE-151A-Group-Project: Parkinson's Telemonitoring Data Preprocessing  
+
 # Introduction
 
-This project focuses on preprocessing and predictive modeling of the Parkinson's Telemonitoring dataset, which contains biomedical voice measurements from individuals with early-stage Parkinson's disease. We chose this dataset to explore how voice data can be used to predict Unified Parkinson's Disease Rating Scale (UPDRS) scores, crucial for tracking disease progression. This approach is compelling as it leverages non-invasive data collection for remote monitoring, potentially transforming patient care. Developing an accurate predictive model can significantly impact the early detection and management of Parkinson's disease, improving patient outcomes and enabling more efficient healthcare delivery.
-
-# CSE-151A-Group-Project: Parkinson's Telemonitoring Data Preprocessing
+This project focuses on preprocessing and predictive modeling of the Parkinson's Telemonitoring dataset, which contains biomedical voice measurements from individuals with early-stage Parkinson's disease. We chose this dataset to explore how voice data can be used to predict Unified Parkinson's Disease Rating Scale (UPDRS) scores, crucial for tracking disease progression. This approach is compelling as it leverages non-invasive data collection for remote monitoring, potentially transforming patient care. Developing an accurate predictive model can significantly impact the early detection and management of Parkinson's disease, improving patient outcomes and enabling more efficient healthcare delivery.  
 
 This README file provides an overview of the preprocessing steps applied to the Parkinson's Telemonitoring dataset, which is available [here](https://archive.ics.uci.edu/dataset/189/parkinsons+telemonitoring).
 Here is a link to our [Jupyter notebook](https://colab.research.google.com/drive/1PaSum9sxrsMVCX2jmO0YsWdohvbplU4j?usp=sharing).
